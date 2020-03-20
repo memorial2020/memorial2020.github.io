@@ -202,12 +202,6 @@ img#leavemob{
     .checkmap{
         display: none;
     }
-    img#button{
-        margin-left:43%;
-        margin-top:59%;
-        position: absolute;
-        z-index:9;
-    }
 }
 
 @media only screen and (max-width: 1024px) {
