@@ -127,13 +127,6 @@ iframe#mapmob{
 }
 
 img#button{
-    margin-left:43%;
-    margin-top:49%;
-    position: absolute;
-    z-index:9;
-}
-
-img#leave{
     margin-left:60%;
     margin-top:4%;
     position: absolute;
@@ -181,9 +174,6 @@ img#leavemob{
 @media only screen and (max-width: 6000px) {
     .checkmap{
         display: none;
-    }
-    .boton-envio{
-        margin-bottom: 25%;
     }
 }
 
