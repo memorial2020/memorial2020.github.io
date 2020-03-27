@@ -1,4 +1,8 @@
 
+body{
+    background-color: #272727;
+}
+
 h1 { 
     font-family: Futura, Trebuchet MS, Arial, sans-serif; 
     font-size: 24px; 
@@ -63,16 +67,16 @@ a:active {
     right: 0;
     background-color: #272727;
     padding-top: 20px;
-    padding-bottom: 600px;
 }
 
 .interlude {
-    margin-left: 37%;
+    margin-left: 36.4%;
     height: 100%;
-    width: 3%;
+    width: 4%;
     top: 0;
     position: fixed;
     background-image: url(../img/hash.jpg);
+    background-color: #fff;
     background-position: center;
     background-repeat: repeat-y;
 }
