@@ -67,6 +67,7 @@ a:active {
     right: 0;
     background-color: #272727;
     padding-top: 20px;
+    padding-bottom: 25px;
 }
 
 .interlude {
@@ -183,18 +184,12 @@ img#leavemob{
 }
 
 @media only screen and (max-width: 1600px) {
-    .side{
-        height: 112%;
-    }
     .checkmap{
         display: none;
     }
 }
 
 @media only screen and (max-width: 1400px) {
-    .side{
-        height: 140%;
-    }
     .logo img {
         width: 110%;
     }
@@ -210,10 +205,6 @@ img#leavemob{
 }
 
 @media only screen and (max-width: 1024px) {
-    .side{
-        width: 100%;
-        height: 140%;
-    }
     .interlude{
         display: none;
     }
@@ -227,37 +218,3 @@ img#leavemob{
         display: inline;
     }
 } 
-
-@media only screen and (max-width: 750px) {
-    .side{
-        width: 100%;
-        height: 120%;
-    }
-}
-
-@media only screen and (max-width: 640px) {
-    .side{
-        width: 100%;
-        height: 130%;
-    }
-}
-
-@media only screen and (max-width: 460px) {
-    .side{
-        width: 100%;
-        height: 180%;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .side{
-        width: 100%;
-        height: 260%;
-    }
-}
-
-
-
-
-
-
