@@ -67,7 +67,6 @@ a:active {
     right: 0;
     background-color: #272727;
     padding-top: 20px;
-    padding-bottom: 25px;
 }
 
 .interlude {
@@ -161,6 +160,7 @@ img#leavemob{
     margin-right: auto;
     width: 40%;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .content {
