@@ -217,4 +217,7 @@ img#leavemob{
     .checkmap{
         display: inline;
     }
+    .side{
+        width: 100%;
+    }
 } 
