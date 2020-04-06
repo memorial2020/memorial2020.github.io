@@ -22,7 +22,7 @@
   </title>
 </head>
 <body>
-
+  <div id="memorial">
         <div class="side">
             <div class="logo">
               <center><img src="img/logo.png" width="300"></center>
@@ -31,12 +31,12 @@
 
             <div class="content">
                     <center><div class="checkmap">
-                            <a href="map-mobile.html"><img src="img/mapa.png" width="100"></a>
-                            <a href="form-mobile.html"><img src="img/send.png" width="100"></a>
+                            <a href="#" id="map" onclick="map()"><img src="img/mapa.png" width="100"></a>
+                            <a href="#" id="form" onclick="form()"><img src="img/send.png" width="100"></a>
                         </div></center>
             </div>
 
-            <div class="content" id="language">
+            <div class="content" id="main">
 
                 <p>La irreparable pandemia de coronavirus nos ha obligado a despedirnos de familiares y amigos antes de tiempo. Este memorial o monumento digital pretende servir de espacio para todos aquellos que deseen contar las historias de quienes nos han dejado. Para que no caigan en el olvido de las cifras y las gráficas.</p>
                 <h1>Envío de la historia</h1>
@@ -54,20 +54,17 @@
             
         </div>    
         <div class="interlude"></div>
-<div class="map">
-        <a href="#" onclick="msg()"><img id="button" data-value="1" src="img/enviar.png" width="200" /></a>
-        <div id="inside">
-            <iframe id="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSeUkiI6YHTPk2tBhVtihPQ8nRfo_FfldyVzyGeelFmOKX-ZGw/viewform?embedded=true" width="440" height="490" frameborder="0" marginheight="0" marginwidth="0">...</iframe>
+        <div class="map">
+                <a href="#" onclick="msg()"><img id="button" data-value="1" src="img/enviar.png" width="200" /></a>
+                <div id="inside">
+                    <iframe id="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSeUkiI6YHTPk2tBhVtihPQ8nRfo_FfldyVzyGeelFmOKX-ZGw/viewform?embedded=true" width="440" height="490" frameborder="0" marginheight="0" marginwidth="0">...</iframe>
+                </div>
+                <iframe id="map"  src="https://www.google.com/maps/d/u/0/embed?mid=1JGG49aemfAOFtVDhHD1PS85XJHJGa_hw" width="100%" height="150%"></iframe>
         </div>
-        <iframe id="map"  src="https://www.google.com/maps/d/u/0/embed?mid=1JGG49aemfAOFtVDhHD1PS85XJHJGa_hw" width="100%" height="150%"></iframe>
-</div>
-    
+  </div>   
+</body>
 
-       
-
-        </body>
-
-        <script>
+<script>
 
         function msg() {
             if(document.getElementById("button").getAttribute("data-value") == '1'){
@@ -89,14 +86,20 @@
         }
           
         function info() {
-                document.getElementById("language").innerHTML = "<p>La irreparable pandemia de coronavirus nos ha obligado a despedirnos de familiares y amigos antes de tiempo. Este memorial o monumento digital pretende servir de espacio para todos aquellos que deseen contar las historias de quienes nos han dejado. Para que no caigan en el olvido de las cifras y las gráficas.</p><h1>Envío de la historia</h1><p>Utiliza el formulario para mandarnos la historia. Si prefieres utilizar las iniciales o un seudónimo para el fallecido, puedes hacerlo.</p><h1>Revisión y publicación</h1><p>Una vez revisada, incluiremos la historia como un punto en el mapa. Asegúrate de incluir un email de contacto, nos pondremos en contacto contigo en caso de que sea necesario confirmar algún dato.</p><h1>Sobre el memorial</h1><p>El memorial es una iniciativa libre; permanecerá online, puedes compartirlo y visitarlo siempre que quieras.</p><div class='contact'><center><h3><a href='#' id='legal' onclick='legal()'>AVISO LEGAL</a></h3></center><center><a href='https://twitter.com/memorial2020es'><img src='img/tw.png' width='40'></a> <a href='mailto:memoria2020.es@gmail.com'><img src='img/mail.png' width='43'></a></center></div>";
+                document.getElementById("main").innerHTML = "<p>La irreparable pandemia de coronavirus nos ha obligado a despedirnos de familiares y amigos antes de tiempo. Este memorial o monumento digital pretende servir de espacio para todos aquellos que deseen contar las historias de quienes nos han dejado. Para que no caigan en el olvido de las cifras y las gráficas.</p><h1>Envío de la historia</h1><p>Utiliza el formulario para mandarnos la historia. Si prefieres utilizar las iniciales o un seudónimo para el fallecido, puedes hacerlo.</p><h1>Revisión y publicación</h1><p>Una vez revisada, incluiremos la historia como un punto en el mapa. Asegúrate de incluir un email de contacto, nos pondremos en contacto contigo en caso de que sea necesario confirmar algún dato.</p><h1>Sobre el memorial</h1><p>El memorial es una iniciativa libre; permanecerá online, puedes compartirlo y visitarlo siempre que quieras.</p><div class='contact'><center><h3><a href='#' id='legal' onclick='legal()'>AVISO LEGAL</a></h3></center><center><a href='https://twitter.com/memorial2020es'><img src='img/tw.png' width='40'></a> <a href='mailto:memoria2020.es@gmail.com'><img src='img/mail.png' width='43'></a></center></div>";
                 document.getElementById("info").style.textShadow = "2px 2px #000";
                 document.getElementById("legal").style.textShadow = "";
         }
         function legal() {
-                document.getElementById("language").innerHTML = "<h3><a href='#'' id='info' onclick='info()''>VOLVER</a></h3><p><u>Esta web nace con el único objetivo de convertirse en un memorial o monumento digital dedicado a quienes nos han dejado por culpa de la pandemia que azota el 2020.</u></p><p>Esta web se limita a ser un repositorio de recuerdos. El contenido de los mensajes publicados es responsabilidad exclusiva de los remitentes.</p><p>Es una iniciativa altruista de <a target='_blank' href='https://twitter.com/manutv'>@manutv</a>, periodista e ingeniero informático, quien, tras revisar y publicar los mensajes recibidos, procede de inmediato al borrado de los correos y datos personales, sin realizar ningún tipo de tratamiento de datos posterior.</p><p>Se ha utilizado el servicio de Google para ofrecer el formulario de contacto. Se puede acceder a su Política de Privacidad desde el propio formulario.</p><p>Si desea modificar o eliminar un mensaje publicado, envíe un email a <a href='mailto:memoria2020.es@gmail.com'>memoria2020.es@gmail.com</a>.</p><p>Esta web sólo utiliza cookies técnicas necesarias. Son aquéllas que permiten al usuario la navegación a través de la web y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos.</p><p>Se reserva el derecho de efectuar, en cualquier momento y sin necesidad de previo aviso, modificaciones y actualizaciones de la información contenida en la web, de su configuración y presentación, así como de eliminar información contenida en esta o de suspender temporalmente la accesibilidad al web.</p><p>No se garantiza la inexistencia de interrupciones o errores en el acceso a la web o a su contenido, ni se hará responsable de posibles problemas técnicos que se produzcan durante la conexión a Internet. Igualmente se excluye de toda responsabilidad que se pudiera derivar de interferencias, omisiones o virus informáticos, motivados por causas ajenas al titular del web, así como de daños causados por terceras personas mediante intromisiones ilegítimas al sistema informático fuera del control del titular del web.</p><p>El usuario reconoce y acepta que el titular de la web no es responsable de la disponibilidad de los sitios web de terceros y no garantiza ni asume ningún tipo de responsabilidad por los daños y perjuicios sufridos por el acceso a contenidos de terceros a través de las posibles conexiones, vínculos o links de los sitios enlazados desde la web, a través de los mensajes enviados por los familiares de los fallecidos. El titular de la web no se responsabiliza de la veracidad de la información publicada en los mensajes.</p>";
+                document.getElementById("main").innerHTML = "<h3><a href='#'' id='info' onclick='info()''>VOLVER</a></h3><p><u>Esta web nace con el único objetivo de convertirse en un memorial o monumento digital dedicado a quienes nos han dejado por culpa de la pandemia que azota el 2020.</u></p><p>Esta web se limita a ser un repositorio de recuerdos. El contenido de los mensajes publicados es responsabilidad exclusiva de los remitentes.</p><p>Es una iniciativa altruista de <a target='_blank' href='https://twitter.com/manutv'>@manutv</a>, periodista e ingeniero informático, quien, tras revisar y publicar los mensajes recibidos, procede de inmediato al borrado de los correos y datos personales, sin realizar ningún tipo de tratamiento de datos posterior.</p><p>Se ha utilizado el servicio de Google para ofrecer el formulario de contacto. Se puede acceder a su Política de Privacidad desde el propio formulario.</p><p>Si desea modificar o eliminar un mensaje publicado, envíe un email a <a href='mailto:memoria2020.es@gmail.com'>memoria2020.es@gmail.com</a>.</p><p>Esta web sólo utiliza cookies técnicas necesarias. Son aquéllas que permiten al usuario la navegación a través de la web y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos.</p><p>Se reserva el derecho de efectuar, en cualquier momento y sin necesidad de previo aviso, modificaciones y actualizaciones de la información contenida en la web, de su configuración y presentación, así como de eliminar información contenida en esta o de suspender temporalmente la accesibilidad al web.</p><p>No se garantiza la inexistencia de interrupciones o errores en el acceso a la web o a su contenido, ni se hará responsable de posibles problemas técnicos que se produzcan durante la conexión a Internet. Igualmente se excluye de toda responsabilidad que se pudiera derivar de interferencias, omisiones o virus informáticos, motivados por causas ajenas al titular del web, así como de daños causados por terceras personas mediante intromisiones ilegítimas al sistema informático fuera del control del titular del web.</p><p>El usuario reconoce y acepta que el titular de la web no es responsable de la disponibilidad de los sitios web de terceros y no garantiza ni asume ningún tipo de responsabilidad por los daños y perjuicios sufridos por el acceso a contenidos de terceros a través de las posibles conexiones, vínculos o links de los sitios enlazados desde la web, a través de los mensajes enviados por los familiares de los fallecidos. El titular de la web no se responsabiliza de la veracidad de la información publicada en los mensajes.</p>";
                 document.getElementById("info").style.textShadow = "";
                 document.getElementById("legal").style.textShadow = "2px 2px #000";
         }
+        function map() {
+                document.getElementById("memorial").innerHTML = "<div class='mapmob'><a href='index.html'><img id='leavemob' src='img/inicio-mob.png' width='80' /></a><iframe id='mapmob' src='https://www.google.com/maps/d/u/0/embed?mid=1JGG49aemfAOFtVDhHD1PS85XJHJGa_hw' width='100%' height='130%' scrolling='yes'></iframe></div>";
+        }
+        function form() {
+                document.getElementById("memorial").innerHTML = "<div class='mapmob'><a href='index.html'><img id='leavemob' src='img/inicio-mob.png' width='80'/></a><iframe id='gform-mob' src='https://docs.google.com/forms/d/e/1FAIpQLSeUkiI6YHTPk2tBhVtihPQ8nRfo_FfldyVzyGeelFmOKX-ZGw/viewform?embedded=true' width='400' height='650' frameborder='0' marginheight='0' marginwidth='0'>...</iframe></div>";
+        }
 
-            </script>
+</script>
