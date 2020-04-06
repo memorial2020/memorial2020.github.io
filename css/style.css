@@ -109,8 +109,7 @@ iframe#gform {
 }
 
 iframe#gform-mob {
-    margin-right:20%;
-    margin-top:40%;
+    margin-top:12%;
     position:fixed; 
     z-index:9;
 }
@@ -139,8 +138,8 @@ img#button{
 }
 
 img#leavemob{
-    margin-left:7%;
-    margin-top:4%;
+    margin-left:70%;
+    margin-top:2%;
     position: absolute;
     z-index:9;
 }
